@@ -19,13 +19,13 @@ jobs:
         dotnet-version: '8.0.x'
     
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ConsoleApp2/ConsoleApp2.fsproj && dotnet restore ConsoleApp2.Tests/ConsoleApp2.Tests.fsproj
     
     - name: Build with warnings as errors
-      run: dotnet build --configuration Release --no-restore /p:TreatWarningsAsErrors=true /p:EnforceCodeStyleInBuild=true
+      run: dotnet build ConsoleApp2/ConsoleApp2.fsproj --configuration Release --no-restore /p:TreatWarningsAsErrors=true /p:EnforceCodeStyleInBuild=true && dotnet build ConsoleApp2.Tests/ConsoleApp2.Tests.fsproj --configuration Release --no-restore /p:TreatWarningsAsErrors=true /p:EnforceCodeStyleInBuild=true
     
     - name: Run tests
-      run: dotnet test --configuration Release --no-build --verbosity normal --logger "console;verbosity=detailed"
+      run: dotnet test ConsoleApp2.Tests/ConsoleApp2.Tests.fsproj --configuration Release --no-build --verbosity normal --logger "console;verbosity=detailed"
     
     - name: Install FSharpLint
       run: dotnet tool install -g fsharplint
