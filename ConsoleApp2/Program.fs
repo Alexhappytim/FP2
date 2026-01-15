@@ -157,6 +157,7 @@ module BinaryDict =
 
         items |> Seq.toList |> addAll (empty ())
 
+    [<NoComparison; NoEquality>]
     type ValueMonoid<'V> = { empty: 'V; append: 'V -> 'V -> 'V }
 
     let emptyMonoid<'K, 'V when 'K: comparison> () : Dict<'K, 'V> = empty<'K, 'V> ()
