@@ -1,0 +1,85 @@
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options directory
+.vs/
+
+# Rider IDE
+.idea/
+*.sln.iml
+.idea/**
+*.csproj.user
+*.fsproj.user
+*.vbproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Visual Studio
+*.vcxproj.filters
+*.vcxproj.user
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet Backup Files
+*.nuget.props
+*.nuget.targets
+
+# NuGet Package Directory
+packages/
+.nupkg/
+*.nupkg
+*.snupkg
+
+# dotnet
+project.assets.json
+project.lock.json
+.dotnet/
+
+# Test Results
+TestResults/
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# VS Code directories
+.vscode
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local environment
+.env
+.env.local
+*.log
+
+# F# specific
+*.fsproj.user

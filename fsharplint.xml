@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FSharpLintSettings xmlns="https://github.com/fsprojects/FSharpLint/blob/master/ConfigSchema.xsd">
+  <!-- Включаем все правила и предупреждения -->
+  
+  <Analysers>
+    <!-- Соглашения по именованию -->
+    <Naming>
+      <Rules>
+        <InterfaceNames>
+          <Enabled>true</Enabled>
+        </InterfaceNames>
+        <ExceptionNames>
+          <Enabled>true</Enabled>
+        </ExceptionNames>
+        <TypeNames>
+          <Enabled>true</Enabled>
+        </TypeNames>
+        <RecordFieldNames>
+          <Enabled>true</Enabled>
+        </RecordFieldNames>
+        <EnumCasesNames>
+          <Enabled>true</Enabled>
+        </EnumCasesNames>
+        <UnionCasesNames>
+          <Enabled>true</Enabled>
+        </UnionCasesNames>
+        <ModuleNames>
+          <Enabled>true</Enabled>
+        </ModuleNames>
+        <LiteralNames>
+          <Enabled>true</Enabled>
+        </LiteralNames>
+        <NamespaceNames>
+          <Enabled>true</Enabled>
+        </NamespaceNames>
+        <MemberNames>
+          <Enabled>true</Enabled>
+        </MemberNames>
+        <ParameterNames>
+          <Enabled>true</Enabled>
+        </ParameterNames>
+        <MeasureTypeNames>
+          <Enabled>true</Enabled>
+        </MeasureTypeNames>
+        <ActivePatternNames>
+          <Enabled>true</Enabled>
+        </ActivePatternNames>
+        <PublicValuesNames>
+          <Enabled>true</Enabled>
+        </PublicValuesNames>
+        <PrivateValuesNames>
+          <Enabled>false</Enabled>
+        </PrivateValuesNames>
+      </Rules>
+    </Naming>
+    
+    <!-- Соглашения по форматированию -->
+    <Typography>
+      <Enabled>true</Enabled>
+      <Rules>
+        <MaxCharactersOnLine>
+          <Enabled>true</Enabled>
+          <Length>120</Length>
+        </MaxCharactersOnLine>
+        <TrailingWhitespaceOnLine>
+          <Enabled>true</Enabled>
+          <NumberOfSpacesAllowed>0</NumberOfSpacesAllowed>
+        </TrailingWhitespaceOnLine>
+        <MaxLinesInFile>
+          <Enabled>true</Enabled>
+          <Lines>1000</Lines>
+        </MaxLinesInFile>
+        <TrailingNewLineInFile>
+          <Enabled>true</Enabled>
+        </TrailingNewLineInFile>
+        <NoTabCharacters>
+          <Enabled>true</Enabled>
+        </NoTabCharacters>
+      </Rules>
+    </Typography>
+    
+    <!-- Конвенции -->
+    <Conventions>
+      <Enabled>true</Enabled>
+      <Rules>
+        <NestedStatements>
+          <Enabled>true</Enabled>
+          <Depth>8</Depth>
+        </NestedStatements>
+        <NumberOfItems>
+          <Enabled>true</Enabled>
+          <MaxItems>
+            <Functions>10</Functions>
+            <Members>10</Members>
+            <Properties>10</Properties>
+            <Clauses>15</Clauses>
+            <MatchClauses>15</MatchClauses>
+            <BooleanOperators>5</BooleanOperators>
+          </MaxItems>
+        </NumberOfItems>
+        <SourceLength>
+          <Enabled>true</Enabled>
+          <MaxLinesInFunction>100</MaxLinesInFunction>
+          <MaxLinesInMember>100</MaxLinesInMember>
+          <MaxLinesInConstructor>50</MaxLinesInConstructor>
+          <MaxLinesInValue>50</MaxLinesInValue>
+          <MaxLinesInProperty>50</MaxLinesInProperty>
+          <MaxLinesInClass>500</MaxLinesInClass>
+          <MaxLinesInEnum>500</MaxLinesInEnum>
+          <MaxLinesInUnion>500</MaxLinesInUnion>
+          <MaxLinesInRecord>500</MaxLinesInRecord>
+          <MaxLinesInModule>1000</MaxLinesInModule>
+        </SourceLength>
+      </Rules>
+    </Conventions>
+    
+    <!-- Сложность кода -->
+    <Complexity>
+      <Enabled>true</Enabled>
+      <Rules>
+        <CyclomaticComplexity>
+          <Enabled>true</Enabled>
+          <MaxComplexity>15</MaxComplexity>
+        </CyclomaticComplexity>
+      </Rules>
+    </Complexity>
+    
+    <!-- Оптимизация -->
+    <Optimisation>
+      <Enabled>true</Enabled>
+      <Rules>
+        <ListComprehensionToList>
+          <Enabled>true</Enabled>
+        </ListComprehensionToList>
+        <UseLiteralListNotLiteral>
+          <Enabled>true</Enabled>
+        </UseLiteralListNotLiteral>
+      </Rules>
+    </Optimisation>
+    
+    <!-- Binding -->
+    <Binding>
+      <Enabled>true</Enabled>
+      <Rules>
+        <FavourIgnoreOverLetWild>
+          <Enabled>true</Enabled>
+        </FavourIgnoreOverLetWild>
+        <UselessBinding>
+          <Enabled>true</Enabled>
+        </UselessBinding>
+        <TupleOfWildcards>
+          <Enabled>true</Enabled>
+        </TupleOfWildcards>
+        <WildcardNamedWithAsPattern>
+          <Enabled>true</Enabled>
+        </WildcardNamedWithAsPattern>
+      </Rules>
+    </Binding>
+    
+    <!-- Проверка функций -->
+    <Function>
+      <Enabled>true</Enabled>
+      <Rules>
+        <ReimplementsFunction>
+          <Enabled>true</Enabled>
+        </ReimplementsFunction>
+        <CanBeReplacedWithComposition>
+          <Enabled>true</Enabled>
+        </CanBeReplacedWithComposition>
+      </Rules>
+    </Function>
+    
+    <!-- Проверка интервалов -->
+    <RaiseWithTooManyArguments>
+      <Enabled>true</Enabled>
+      <Rules>
+        <FailwithWithSingleArgument>
+          <Enabled>true</Enabled>
+        </FailwithWithSingleArgument>
+        <RaiseWithSingleArgument>
+          <Enabled>true</Enabled>
+        </RaiseWithSingleArgument>
+        <NullArgWithSingleArgument>
+          <Enabled>true</Enabled>
+        </NullArgWithSingleArgument>
+        <InvalidOpWithSingleArgument>
+          <Enabled>true</Enabled>
+        </InvalidOpWithSingleArgument>
+        <InvalidArgWithTwoArguments>
+          <Enabled>true</Enabled>
+        </InvalidArgWithTwoArguments>
+        <FailwithfWithArgumentsMatchingFormatString>
+          <Enabled>true</Enabled>
+        </FailwithfWithArgumentsMatchingFormatString>
+      </Rules>
+    </RaiseWithTooManyArguments>
+  </Analysers>
+  
+  <!-- Игнорируемые файлы -->
+  <IgnoreFiles>
+    <Update>
+      <![CDATA[assemblyinfo.fs]]>
+    </Update>
+  </IgnoreFiles>
+  
+  <!-- Подсказки -->
+  <Hints>
+    <Enabled>true</Enabled>
+    <Hints>
+      <![CDATA[
+        not (a = b) ===> a <> b
+        not (a <> b) ===> a = b
+        not (a > b) ===> a <= b
+        not (a >= b) ===> a < b
+        not (a < b) ===> a >= b
+        not (a <= b) ===> a > b
+        compare x y = 0 ===> x = y
+        compare x y <> 0 ===> x <> y
+        compare x y > 0 ===> x > y
+        compare x y < 0 ===> x < y
+        List.head (List.sort x) ===> List.min x
+        List.head (List.sortBy f x) ===> List.minBy f x
+        x = true ===> x
+        x = false ===> not x
+        true = x ===> x
+        false = x ===> not x
+        x <> true ===> not x
+        x <> false ===> x
+        true <> x ===> not x
+        false <> x ===> x
+        if x then true else false ===> x
+        if x then false else true ===> not x
+        not (not x) ===> x
+        fst (x, _) ===> x
+        snd (_, x) ===> x
+        List.isEmpty [] ===> true
+        Array.isEmpty [||] ===> true
+        x::[] ===> [x]
+        x @ [] ===> x
+        [] @ x ===> x
+        List.length x = 0 ===> List.isEmpty x
+        Array.length x = 0 ===> Array.isEmpty x
+        List.length x <> 0 ===> not (List.isEmpty x)
+        Array.length x <> 0 ===> not (Array.isEmpty x)
+        List.fold (+) 0 x ===> List.sum x
+        Array.fold (+) 0 x ===> Array.sum x
+        List.map f x |> List.concat ===> List.collect f x
+        Array.map f x |> Array.concat ===> Array.collect f x
+      ]]>
+    </Hints>
+  </Hints>
+</FSharpLintSettings>
