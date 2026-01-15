@@ -1,0 +1,21 @@
+{
+  "indentation": 4,
+  "maxLineLength": 100,
+  "semicolonAtEndOfLine": false,
+  "spaceBeforeParameter": true,
+  "spaceBeforeLowercaseInvokedFunction": false,
+  "spaceBeforeUppercaseInvokedFunction": false,
+  "spaceAroundDelimiter": true,
+  "indentOnTryWith": false,
+  "reorderOpenDeclaration": false,
+  "newlineAroundTopLevelDefinition": true,
+  "newlineBetweenTypeDefinitionAndMembers": false,
+  "keepNewlineAfter": [
+    "let"
+  ],
+  "maxIfThenElseShortWidth": 60,
+  "multilineBlockBracketsOnSameColumn": false,
+  "newlineBetweenAttributes": true,
+  "attributeOnSameLineAsAttribute": true,
+  "splitNonInfixOperands": false
+}
