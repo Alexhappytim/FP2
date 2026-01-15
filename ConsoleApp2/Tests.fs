@@ -67,9 +67,9 @@ let ``appendWith nonempty a with empty b`` () =
 
 [<Fact>]
 let ``appendWith associativity explicit case`` () =
-    let a = BinaryDict.ofSeq [(0, 0)]
-    let b = BinaryDict.ofSeq [(0, 0)]
-    let c = BinaryDict.ofSeq [(0, 0)]
+    let a = BinaryDict.ofSeq [(1, 1)]
+    let b = BinaryDict.ofSeq [(1, 2)]
+    let c = BinaryDict.ofSeq [(1, 3)]
     let left = BinaryDict.appendWith intAddMonoid (BinaryDict.appendWith intAddMonoid a b) c
     let right = BinaryDict.appendWith intAddMonoid a (BinaryDict.appendWith intAddMonoid b c)
     Assert.True(BinaryDict.equals left right)

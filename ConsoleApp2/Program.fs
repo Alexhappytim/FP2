@@ -150,21 +150,24 @@ module BinaryDict =
     /// Monoid empty element for dictionaries
     let emptyMonoid<'K,'V when 'K : comparison> () : Dict<'K,'V> = empty<'K,'V>()
 
-    /// Monoid append: union of dictionaries, combining duplicate values via provided monoid
+    /// Monoid append: union of dictionaries, second dictionary values win on duplicate keys
+    /// [1,2] + [1,1] = [1,1]
     let appendWith (m: ValueMonoid<'V>) (a: Dict<'K,'V>) (b: Dict<'K,'V>) : Dict<'K,'V> =
+        // Start with all of b's entries, then add entries from a only if key doesn't exist
         foldLeft (fun acc k v ->
             match tryFind k acc with
             | None -> add k v acc
-            | Some existing -> add k (m.append existing v) acc
-        ) a b
+            | Some _ -> acc  // key exists in b, keep b's value
+        ) b a
+
 
 
 
     /// Keys
-    let keys (d: Dict<'K,'V>) = d |> toSeq |> Seq.map fst
+    let keys<'K,'V when 'K : comparison> (d: Dict<'K,'V>) = d |> toSeq |> Seq.map fst
 
     /// Values
-    let values (d: Dict<'K,'V>) = d |> toSeq |> Seq.map snd
+    let values<'K,'V when 'K : comparison> (d: Dict<'K,'V>) = d |> toSeq |> Seq.map snd
 
     /// Fold over pairs as list for test convenience
-    let toList d = d |> toSeq |> Seq.toList
+    let toList<'K,'V when 'K : comparison> (d: Dict<'K,'V>) = d |> toSeq |> Seq.toList
